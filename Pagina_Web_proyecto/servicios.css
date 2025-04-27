@@ -1,0 +1,396 @@
+/* =====================================
+   RESET Y BASE
+===================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: #f5faff;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* =====================================
+     ESPACIADO GLOBAL PARA SECCIONES
+  ===================================== */
+  section {
+    padding: 120px 20px;
+  }
+  
+  /* =====================================
+     PALETA DE COLORES
+  ===================================== */
+  /* Azul Oscuro: #0D47A1  
+     Azul Brillante: #1976D2  
+     Azul Claro: #e3f2fd  
+     Fondo: #f5faff
+  */
+  
+  /* =====================================
+     NAVBAR, MENÚ OVERLAY Y LOGIN
+  ===================================== */
+  .navbar {
+    background: #0D47A1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1100;
+    transition: top 0.3s;
+  }
+  .logo a {
+    color: #fff;
+    font-size: 1.8em;
+    text-decoration: none;
+  }
+  
+  /* Contenedor de autenticación a la derecha */
+  .user-auth {
+    margin-right: 20px;
+  }
+  .login-btn {
+    background: #fff;
+    color: #0D47A1;
+    padding: 5px 10px;
+    border: 1px solid #0D47A1;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+  }
+  .login-btn:hover {
+    background: #e3f2fd;
+  }
+  
+  /* Estilo para las tres flechitas (arrows) */
+  .arrows {
+    margin-left: 5px;
+    font-size: 0.9em;
+  }
+  
+  /* Cuando el usuario esté autenticado, se reemplaza por un círculo */
+  .user-circle {
+    background: #1976D2;
+    color: #fff;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-right: 5px;
+  }
+  
+  /* Mini desplegable cuando se pulsa el círculo */
+  .user-dropdown {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+    display: none;
+    z-index: 1200;
+  }
+  .user-dropdown a {
+    display: block;
+    padding: 10px 15px;
+    color: #0D47A1;
+    text-decoration: none;
+  }
+  .user-dropdown a:hover {
+    background: #e3f2fd;
+  }
+  
+  /* Hamburger */
+  .hamburger {
+    cursor: pointer;
+    width: 30px;
+  }
+  .hamburger span {
+    display: block;
+    height: 3px;
+    background: #fff;
+    margin: 5px 0;
+    border-radius: 2px;
+  }
+  
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(13, 71, 161, 0.95);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+  }
+  .menu-overlay.active {
+    display: flex;
+  }
+  .overlay-menu {
+    list-style: none;
+    text-align: center;
+  }
+  .overlay-menu li {
+    margin: 20px 0;
+  }
+  .overlay-menu li a {
+    color: #fff;
+    font-size: 1.8em;
+    text-decoration: none;
+  }
+/* Logo */
+.logo img {
+  height: 80px; /* Tamaño uniforme del logo */
+  width: 80px; /* Asegura que el ancho sea igual al alto */
+  max-width: 100%; /* Asegura que no se desborde */
+  display: block;
+  object-fit: cover; /* Ajusta la imagen dentro del contenedor */
+  border-radius: 50%; /* Hace que el logo sea redondo */
+  margin: 0; /* Elimina márgenes adicionales */
+  border: none; /* Sin bordes */
+  box-shadow: none; /* Sin sombras */
+}
+  
+  /* =====================================
+     HERO SECTION
+  ===================================== */
+  .hero {
+    background: url('images/servicios-hero.jpg') no-repeat center center/cover;
+    height: 70vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px; /* para compensar el header fijo */
+  }
+  .hero-overlay {
+    background: rgba(0, 0, 50, 0.5);
+    padding: 20px;
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+    color: #fff;
+  }
+  .hero-overlay h1 {
+    font-size: 3.2em;
+    margin-bottom: 20px;
+  }
+  .hero-overlay p {
+    font-size: 1.3em;
+  }
+  
+  /* =====================================
+     SECCIÓN "PLANES DE CREACIÓN WEB"
+  ===================================== */
+  .services {
+    background: #fff;
+    text-align: center;
+  }
+  .services h2 {
+    font-size: 2.8em;
+    margin-bottom: 50px;
+    color: #0D47A1;
+  }
+  .service-plans {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+  .plan {
+    background: #e3f2fd;
+    border-radius: 8px;
+    padding: 25px;
+    width: 320px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    text-align: left;
+  }
+  .plan h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #0D47A1;
+  }
+  .plan ul {
+    list-style: disc inside;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+  }
+  .plan ul li {
+    margin-bottom: 10px;
+  }
+  .price {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #1976D2;
+  }
+  .btn {
+    background: #1976D2;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  .btn:hover {
+    background: #0D47A1;
+  }
+  
+  /* =====================================
+     SECCIÓN "PLANES DE MANTENIMIENTO WEB"
+  ===================================== */
+  .maintenance {
+    background: #fff;
+    text-align: center;
+    margin-top: 80px;
+  }
+  .maintenance h2 {
+    font-size: 2.8em;
+    margin-bottom: 50px;
+    color: #0D47A1;
+  }
+  .maintenance-plans {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+  .plan.maintenance-plan {
+    background: #e3f2fd;
+    border-radius: 8px;
+    padding: 25px;
+    width: 320px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    text-align: left;
+  }
+  .plan.maintenance-plan h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #0D47A1;
+  }
+  .plan.maintenance-plan ul {
+    list-style: disc inside;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+  }
+  .plan.maintenance-plan ul li {
+    margin-bottom: 10px;
+  }
+  .plan.maintenance-plan .price {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #1976D2;
+  }
+  
+  /* =====================================
+     SECCIÓN "SERVICIOS ESPECÍFICOS / FUNCIONALES"
+  ===================================== */
+  .functional-services {
+    background: #fff;
+    text-align: center;
+    margin-top: 80px;
+  }
+  .functional-services h2 {
+    font-size: 2.8em;
+    margin-bottom: 50px;
+    color: #0D47A1;
+  }
+  .functional-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+  .plan.functional-plan {
+    background: #e3f2fd;
+    border-radius: 8px;
+    padding: 25px;
+    width: 320px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    text-align: left;
+  }
+  .plan.functional-plan h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #0D47A1;
+  }
+  .plan.functional-plan ul {
+    list-style: disc inside;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+  }
+  .plan.functional-plan ul li {
+    margin-bottom: 10px;
+  }
+  .plan.functional-plan .price {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #1976D2;
+  }
+  
+  /* =====================================
+     FOOTER
+  ===================================== */
+  footer {
+    background: #0D47A1;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.1em;
+  }
+  
+  /* =====================================
+     ANIMATIONS
+  ===================================== */
+  .animated {
+    opacity: 0;
+  }
+  .fade-in-up.start {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+  .fade-in-scale.start {
+    animation: fadeInScale 1s ease-out forwards;
+  }
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  
+  /* =====================================
+     MOBILE RESPONSIVE (max-width: 768px)
+  ===================================== */
+  @media only screen and (max-width: 768px) {
+    section { padding: 80px 15px; }
+    .navbar { padding: 1em 15px; }
+    .logo a { font-size: 1.5em; }
+    .hamburger { width: 25px; }
+    .hamburger span { margin: 4px 0; }
+    .hero { height: 50vh; }
+    .hero-overlay h1 { font-size: 2.5em; margin-bottom: 20px; }
+    .hero-overlay p { font-size: 1.1em; }
+    .service-plans,
+    .maintenance-plans,
+    .functional-cards { flex-direction: column; gap: 20px; }
+  }
+  

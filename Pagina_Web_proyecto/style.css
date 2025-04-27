@@ -1,0 +1,521 @@
+/* =====================================
+   RESET & BASE
+===================================== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  /* (Opcional) Puedes agregar una animación general para el body */
+  animation: fadeIn 1s ease-in-out;
+}
+section {
+  padding: 100px 20px;
+}
+
+/* =====================================
+   VARIABLES GLOBALES
+===================================== */
+:root {
+  --primary-color: #1e88e5;
+  --secondary-color: #1565c0;
+  --accent-color: #ff7043;
+  --light-bg: #f1f8ff;
+  --white: #fff;
+}
+
+/* =====================================
+   NAVBAR & MENU OVERLAY
+===================================== */
+.navbar {
+  background: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  /* Animación de entrada para el navbar */
+  animation: fadeInDown 1s ease-in-out;
+}
+/* Logo */
+.logo img {
+  height: 80px; /* Tamaño uniforme del logo */
+  width: 80px; /* Asegura que el ancho sea igual al alto */
+  max-width: 100%; /* Asegura que no se desborde */
+  display: block;
+  object-fit: cover; /* Ajusta la imagen dentro del contenedor */
+  border-radius: 50%; /* Hace que el logo sea redondo */
+  margin: 0; /* Elimina márgenes adicionales */
+  border: none; /* Sin bordes */
+  box-shadow: none; /* Sin sombras */
+}
+.hamburger {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  z-index: 1100; /* Asegúrate de que esté delante */
+}
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: var(--white); /* Cambia el color si es necesario */
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  color: var(--white);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.menu-overlay.active {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+  /* Animación opcional al mostrarse el menú overlay */
+  animation: fadeIn 0.5s ease;
+}
+.overlay-menu {
+  list-style: none;
+  text-align: center;
+}
+.overlay-menu li {
+  margin: 20px 0;
+}
+.overlay-menu li a {
+  color: var(--white);
+  font-size: 1.8rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.overlay-menu li a:hover {
+  color: var(--accent-color);
+}
+
+/* =====================================
+   HERO SECTION
+===================================== */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--white);
+  /* Animación de entrada para el hero */
+  animation: zoomIn 1s ease-in-out;
+}
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  /* Animación para el título del hero */
+  animation: slideDown 1s ease-in-out;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  /* Animación para el párrafo del hero */
+  animation: fadeIn 1.5s ease-in-out;
+}
+.btn {
+  background: var(--accent-color);
+  color: var(--white);
+  padding: 15px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Animación para el botón */
+  animation: popUp 2s ease;
+}
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* =====================================
+   HOW IT WORKS SECTION
+===================================== */
+.how-it-works {
+  background: var(--light-bg);
+  text-align: center;
+  /* Animación para la sección de "How It Works" */
+  animation: fadeIn 1s ease-in-out;
+}
+.how-it-works h2 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: var(--primary-color);
+}
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.step {
+  background: var(--white);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 250px;
+  transition: transform 0.3s ease;
+  /* Animación para cada paso */
+  animation: slideUp 1s ease-in-out;
+}
+.step:hover {
+  transform: translateY(-10px);
+}
+.step i {
+  font-size: 3rem;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+.step h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+/* =====================================
+   SERVICES SECTION
+===================================== */
+.services {
+  text-align: center;
+}
+.services h2 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: var(--primary-color);
+}
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.card {
+  background: var(--white);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px;
+  transition: transform 0.3s ease;
+  /* Animación para cada tarjeta de servicio */
+  animation: fadeIn 1s ease-in-out;
+}
+.card:hover {
+  transform: translateY(-10px);
+}
+.card i {
+  font-size: 3rem;
+  color: var(--accent-color);
+  margin-bottom: 15px;
+}
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+.btn {
+  margin-bottom: 20px; /* Añade un espacio entre el texto y el botón */
+}
+.card p {
+  margin-bottom: 25px; /* Espacio entre el texto y el botón */
+}
+
+/* =====================================
+   TESTIMONIALS SECTION
+===================================== */
+.testimonials {
+  background: var(--light-bg);
+  text-align: center;
+  padding: 100px 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+.testimonials h2 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: var(--primary-color);
+  position: relative;
+}
+.testimonials h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: var(--accent-color);
+  margin: 10px auto 0;
+}
+.testimonial-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.testimonial {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideUp 1s ease-in-out;
+}
+.testimonial:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.testimonial i {
+  font-size: 3rem;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+.testimonial h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+.testimonial p {
+  font-size: 1.2rem;
+  color: #555;
+  font-style: italic;
+}
+
+/* =====================================
+   FAQ SECTION
+===================================== */
+.faq {
+  background: var(--white);
+  text-align: center;
+  padding: 100px 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+.faq h2 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: var(--primary-color);
+  position: relative;
+}
+.faq h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: var(--accent-color);
+  margin: 10px auto 0;
+}
+.faq-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.faq-item {
+  background: var(--light-bg);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideUp 1s ease-in-out;
+}
+.faq-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.faq-item h3 {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+.faq-item p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* =====================================
+   CONTACT SECTION
+===================================== */
+.contact-info {
+  background: var(--light-bg);
+  text-align: center;
+  padding: 100px 20px;
+  /* Animación para la sección de contacto */
+  animation: fadeIn 1s ease-in-out;
+}
+.contact-info h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+}
+.contact-info p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+.contact-info a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+footer {
+  background: var(--primary-color);
+  color: var(--white);
+  text-align: center;
+  padding: 20px;
+  font-size: 1rem;
+  /* Animación para el footer */
+  animation: fadeIn 1s ease-in-out;
+}
+footer p {
+  margin: 0;
+}
+footer p a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+footer p a:hover {
+  text-decoration: underline;
+}
+
+/* =====================================
+   ANIMACIONES PERSONALIZADAS
+===================================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes popUp {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+  /* Ajustar el tamaño del título y el cohete */
+  .hero h1 {
+    font-size: 1.8rem; /* Reduce el tamaño del título */
+    line-height: 1.4; /* Ajusta el espaciado entre líneas */
+    word-wrap: break-word; /* Permite que el texto se ajuste en varias líneas */
+  }
+
+  .hero p {
+    font-size: 1rem; /* Reduce el tamaño del subtítulo */
+    margin-top: 10px;
+  }
+
+  .hero-overlay {
+    padding: 20px; /* Reduce el padding para móviles */
+  }
+
+  /* Botón en la sección Hero */
+  .hero .btn {
+    font-size: 1rem; /* Ajusta el tamaño del botón */
+    padding: 10px 15px; /* Reduce el padding del botón */
+  }
+
+  /* Ajustar el espaciado en las secciones */
+  section {
+    padding: 50px 15px; /* Reduce el padding en dispositivos móviles */
+  }
+
+  /* Ajustar las tarjetas en las secciones */
+  .service-cards, .testimonial-cards, .faq-cards {
+    flex-direction: column; /* Cambia a diseño vertical */
+    gap: 20px; /* Añade espacio entre las tarjetas */
+  }
+
+  .service-cards .card, .testimonial-cards .testimonial, .faq-cards .faq-item {
+    width: 100%; /* Asegura que las tarjetas ocupen todo el ancho */
+  }
+}

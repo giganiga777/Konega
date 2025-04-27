@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios de Programación Web - Konega</title>
+  <link rel="stylesheet" href="servicios.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.php"> <!-- Cambiado de index.html a index.php -->
+          <img src="images/logo_konega.png" alt="Logo de Konega" />
+        </a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Menú Overlay -->
+  <div class="menu-overlay" id="menuOverlay">
+    <ul class="overlay-menu">
+        <li><a href="index.php">🏠 Inicio</a></li> <!-- Cambiado de index.html a index.php -->
+        <li><a href="sobre.html">👥 Acerca de</a></li>
+        <li><a href="servicios.html">🛠️ Servicios</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay animated fade-in-up">
+      <h1 class="animated fade-in-up">Servicios de Programación Web</h1>
+      <p class="animated fade-in-up" style="animation-delay: 0.5s;">
+        Elige lo que necesitas y haz que tu negocio despegue.
+      </p>
+    </div>
+  </section>
+
+  <!-- Sección 1: Planes de Creación de Webs -->
+  <!-- Renombramos la sección de "services-section" a "services" -->
+  <section class="services">
+    <h2 class="animated fade-in-up">Nuestros Planes</h2>
+    <div class="service-plans">
+      <!-- Plan Básico -->
+      <div class="plan basic animated fade-in-up" style="animation-delay: 0.3s;">
+        <h3>🟢 Plan Básico – “Presencia Online”</h3>
+        <ul>
+          <li>Página web de 1 a 3 secciones (Inicio, Quiénes somos, Contacto)</li>
+          <li>Diseño adaptable a móviles</li>
+          <li>Formulario de contacto simple</li>
+          <li>Integración con redes sociales</li>
+          <li>Hosting y dominio no incluidos (opcional con coste extra)</li>
+        </ul>
+        <p class="price">💰 Precio: desde <strong>100-150 €</strong></p>
+        <a href="contratar.php?tarifa=🟢 Plan Básico – “Presencia Online”" class="btn">Contratar</a>
+      </div>
+      <!-- Plan Profesional -->
+      <div class="plan professional animated fade-in-up" style="animation-delay: 0.6s;">
+        <h3>🔵 Plan Profesional – “Tu Marca Digital”</h3>
+        <ul>
+          <li>Hasta 6 secciones personalizadas (Inicio, Servicios, Blog, Contacto, etc.)</li>
+          <li>Diseño personalizado y profesional</li>
+          <li>Formulario de contacto avanzado</li>
+          <li>Integración con redes sociales y WhatsApp</li>
+          <li>Optimización básica SEO</li>
+          <li>Hosting y dominio incluidos el primer año</li>
+        </ul>
+        <p class="price">💰 Precio: desde <strong>250-400 €</strong></p>
+        <a href="contratar.php?tarifa=🔵 Plan Profesional – “Tu Marca Digital”" class="btn">Contratar</a>
+      </div>
+      <!-- Plan Avanzado -->
+      <div class="plan advanced animated fade-in-up" style="animation-delay: 0.9s;">
+        <h3>🔴 Plan Avanzado – “Web + Funcionalidades”</h3>
+        <ul>
+          <li>Web totalmente a medida</li>
+          <li>Hasta 10 secciones y funcionalidades extra (reservas, tienda online, etc.)</li>
+          <li>Carrito y pasarela de pagos (si es e-commerce)</li>
+          <li>Optimización SEO intermedia</li>
+          <li>Panel de administración (CMS o personalizado)</li>
+          <li>Hosting y dominio incluidos el primer año</li>
+          <li>Soporte técnico durante 1 mes</li>
+        </ul>
+        <p class="price">💰 Precio: desde <strong>500-800 €</strong></p>
+        <a href="contratar.php?tarifa=🔴 Plan Avanzado – “Web + Funcionalidades”" class="btn">Contratar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección 2: Planes de Mantenimiento Web -->
+  <section class="maintenance">
+    <h2 class="animated fade-in-up">Planes de Mantenimiento Web</h2>
+    <div class="maintenance-plans">
+      <!-- Plan Starter -->
+      <div class="plan maintenance-plan animated fade-in-up" style="animation-delay: 0.3s;">
+        <h3>🟡 Plan “Starter” – 10h/mes</h3>
+        <ul>
+          <li>Hasta 10 horas mensuales de cambios, ajustes o mejoras</li>
+          <li>Actualización de contenido, imágenes, textos</li>
+          <li>Soporte técnico vía WhatsApp o email</li>
+          <li>Revisión de seguridad básica mensual</li>
+        </ul>
+        <p class="price">💰 Mensual: <strong>75 €</strong> / Anual: <strong>750 €</strong> (2 meses gratis)</p>
+        <a href="contratar.php?tarifa=🟡 Plan “Starter” – 10h/mes" class="btn">Contratar</a>
+      </div>
+      <!-- Plan Pro -->
+      <div class="plan maintenance-plan animated fade-in-up" style="animation-delay: 0.6s;">
+        <h3>🟠 Plan “Pro” – 20h/mes</h3>
+        <ul>
+          <li>Hasta 20 horas mensuales de mejoras, ajustes o programación</li>
+          <li>Actualización de plugins/sistemas</li>
+          <li>Monitorización de caídas</li>
+          <li>Correcciones de errores</li>
+          <li>Optimización básica de velocidad y SEO</li>
+          <li>Soporte prioritario</li>
+        </ul>
+        <p class="price">💰 Mensual: <strong>130 €</strong> / Anual: <strong>1.300 €</strong> (2 meses gratis)</p>
+        <a href="contratar.php?tarifa=🟠 Plan “Pro” – 20h/mes" class="btn">Contratar</a>
+      </div>
+      <!-- Plan Full Care -->
+      <div class="plan maintenance-plan animated fade-in-up" style="animation-delay: 0.9s;">
+        <h3>🔴 Plan “Full Care” – 40h/mes</h3>
+        <ul>
+          <li>Hasta 40 horas al mes para cambios, mejoras y nuevas funcionalidades</li>
+          <li>Soporte técnico + reuniones mensuales</li>
+          <li>Desarrollo de nuevas secciones, formularios e integraciones API</li>
+          <li>Informes mensuales de rendimiento y visitas</li>
+          <li>Gestión de copias de seguridad y protección</li>
+        </ul>
+        <p class="price">💰 Mensual: <strong>240 €</strong> / Anual: <strong>2.400 €</strong></p>
+        <a href="contratar.php?tarifa=🔴 Plan “Full Care” – 40h/mes" class="btn">Contratar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección 3: Servicios Específicos / Funcionales -->
+  <section class="functional-services">
+    <h2 class="animated fade-in-up">Servicios Específicos / Funcionales</h2>
+    <div class="functional-cards">
+      <!-- Sistema de Reservas para Restaurantes -->
+      <div class="plan functional-plan animated fade-in-up" style="animation-delay: 0.3s;">
+        <h3>🟦 Sistema de Reservas para Restaurantes</h3>
+        <ul>
+          <li>Formulario de reservas con validación</li>
+          <li>Panel de gestión para el dueño</li>
+          <li>Confirmación por correo/SMS</li>
+          <li>Sin WordPress, todo personalizado</li>
+          <li>Archivos JSON o base de datos (según preferencia)</li>
+        </ul>
+        <p class="price">💰 Desde <strong>200-350 €</strong></p>
+        <a href="contratar.php?tarifa=🟦 Sistema de Reservas para Restaurantes" class="btn">Contratar</a>
+      </div>
+      <!-- Panel de Administración Personalizado -->
+      <div class="plan functional-plan animated fade-in-up" style="animation-delay: 0.6s;">
+        <h3>🟧 Panel de Administración Personalizado</h3>
+        <ul>
+          <li>Login seguro</li>
+          <li>Gestión de usuarios o productos</li>
+          <li>CRUD básico (crear, leer, actualizar, eliminar)</li>
+          <li>Desarrollado desde cero, sin CMS</li>
+          <li>Ideal para tiendas, academias, etc.</li>
+        </ul>
+        <p class="price">💰 Desde <strong>300 €</strong> (Opcional con hosting y mantenimiento)</p>
+        <a href="contratar.php?tarifa=🟧 Panel de Administración Personalizado" class="btn">Contratar</a>
+      </div>
+      <!-- Integración de Funcionalidades a Webs Existentes -->
+      <div class="plan functional-plan animated fade-in-up" style="animation-delay: 0.9s;">
+        <h3>🟩 Integración de Funcionalidades a Webs Existentes</h3>
+        <ul>
+          <li>Chat de WhatsApp</li>
+          <li>Formularios avanzados</li>
+          <li>Google Maps, reseñas, horarios dinámicos</li>
+          <li>Newsletter o conexión con Mailchimp</li>
+          <li>Optimización de velocidad</li>
+        </ul>
+        <p class="price">💰 Desde <strong>50 €</strong> por integración</p>
+        <a href="contratar.php?tarifa=🟩 Integración de Funcionalidades a Webs Existentes" class="btn">Contratar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="animated fade-in-up">
+    <p>&copy; 2025 Konega. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="servicios.js"></script>
+</body>
+</html>

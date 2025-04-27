@@ -1,0 +1,47 @@
+[
+    {
+        "nombre": "\ud83d\udfe2 Plan B\u00e1sico \u2013 \u201cPresencia Online\u201d",
+        "descripcion": "Ideal para negocios que solo necesitan estar visibles.\n\nP\u00e1gina web de 1 a 3 secciones (Inicio, Qui\u00e9nes somos, Contacto)\n\nDise\u00f1o adaptable a m\u00f3viles\n\nFormulario de contacto simple\n\nIntegraci\u00f3n con redes sociales\n\nEntrega en 3-5 d\u00edas\n\nHosting y dominio no incluidos (opcional con coste extra)",
+        "precio": "100-150 \u20ac"
+    },
+    {
+        "nombre": "\ud83d\udd35 Plan Profesional \u2013 \u201cTu Marca Digital\u201d",
+        "descripcion": "Perfecto para negocios que necesitan una web completa.\n\nHasta 6 secciones personalizadas (Inicio, Servicios, Blog, Contacto, etc.).\n\nDise\u00f1o personalizado y profesional.\n\nFormulario de contacto avanzado.\n\nIntegraci\u00f3n con redes sociales y WhatsApp.\n\nOptimizaci\u00f3n b\u00e1sica SEO.\n\nHosting y dominio incluidos el primer a\u00f1o.\n\nEntrega en 7-10 d\u00edas.",
+        "precio": "300-400 \u20ac"
+    },
+    {
+        "nombre": "\ud83d\udd34 Plan Avanzado \u2013 \u201cWeb + Funcionalidades\u201d",
+        "descripcion": "Para negocios que necesitan funciones avanzadas o vender online.\n\nWeb totalmente a medida.\n\nHasta 10 secciones y funcionalidades extra (reservas, tienda online, etc.).\n\nCarrito y pasarela de pagos (si es e-commerce).\n\nOptimizaci\u00f3n SEO intermedia.\n\nPanel de administraci\u00f3n (CMS o personalizado).\n\nHosting y dominio incluidos el primer a\u00f1o.\n\nSoporte t\u00e9cnico durante 1 mes.\n\nEntrega en 10-15 d\u00edas.",
+        "precio": "600-800 \u20ac"
+    },
+    {
+        "nombre": "\ud83d\udfe1 Plan \u201cStarter\u201d \u2013 10h\/mes",
+        "descripcion": "Hasta 10 horas mensuales de cambios, ajustes o mejoras.\n\nActualizaci\u00f3n de contenido, im\u00e1genes, textos.\n\nSoporte t\u00e9cnico v\u00eda WhatsApp o email.\n\nRevisi\u00f3n de seguridad b\u00e1sica mensual.",
+        "precio": "75 \u20ac\/mes o 750 \u20ac\/a\u00f1o (2 meses gratis)"
+    },
+    {
+        "nombre": "\ud83d\udfe0 Plan \u201cPro\u201d \u2013 20h\/mes",
+        "descripcion": "Hasta 20 horas mensuales de mejoras, ajustes o programaci\u00f3n.\n\nActualizaci\u00f3n de plugins\/sistemas.\n\nMonitorizaci\u00f3n de ca\u00eddas.\n\nCorrecciones de errores.\n\nOptimizaci\u00f3n b\u00e1sica de velocidad y SEO.\n\nSoporte prioritario.",
+        "precio": "130 \u20ac\/mes o 1.300 \u20ac\/a\u00f1o (2 meses gratis)"
+    },
+    {
+        "nombre": "\ud83d\udd34 Plan \u201cFull Care\u201d \u2013 40h\/mes",
+        "descripcion": "Hasta 40 horas al mes para cambios, mejoras, nuevas funcionalidades.\n\nSoporte t\u00e9cnico + reuniones mensuales.\n\nDesarrollo de nuevas secciones, formularios, integraciones API.\n\nInformes mensuales de rendimiento y visitas.\n\nGesti\u00f3n de copias de seguridad y protecci\u00f3n.",
+        "precio": "240 \u20ac\/mes o 2.400 \u20ac\/a\u00f1o"
+    },
+    {
+        "nombre": "\ud83d\udfe6 Sistema de Reservas para Restaurantes",
+        "descripcion": "Formulario de reservas con validaci\u00f3n.\n\nPanel de gesti\u00f3n para el due\u00f1o.\n\nConfirmaci\u00f3n por correo\/SMS.\n\nSin WordPress, todo personalizado.\n\nArchivos JSON o base de datos (seg\u00fan preferencia).",
+        "precio": "200-350 \u20ac"
+    },
+    {
+        "nombre": "\ud83d\udfe7 Panel de Administraci\u00f3n Personalizado",
+        "descripcion": "Login seguro.\n\nGesti\u00f3n de usuarios o productos.\n\nCRUD b\u00e1sico (crear, leer, actualizar, eliminar).\n\nSin CMS (hecho desde cero).\n\nIdeal para tiendas, academias, etc.",
+        "precio": "300 \u20ac"
+    },
+    {
+        "nombre": "\ud83d\udfe9 Integraci\u00f3n de funcionalidades a webs ya existentes",
+        "descripcion": "Chat de WhatsApp.\n\nFormularios avanzados.\n\nGoogle Maps, rese\u00f1as, horarios din\u00e1micos.\n\nNewsletter o conexi\u00f3n con Mailchimp.\n\nOptimizaci\u00f3n de velocidad.",
+        "precio": "Desde 50 \u20ac por integraci\u00f3n"
+    }
+]
